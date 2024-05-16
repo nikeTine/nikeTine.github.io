@@ -1,1064 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>Hexo</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-schedule">
-
-    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-05-16 09:25:02'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/15/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E7%94%B5%E8%B7%AF%E6%A8%A1%E6%8B%9F%E5%92%8C%E7%94%B5%E8%B7%AF%E5%AE%9A%E5%BE%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/15/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E7%94%B5%E8%B7%AF%E6%A8%A1%E6%8B%9F%E5%92%8C%E7%94%B5%E8%B7%AF%E5%AE%9A%E5%BE%8B/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-05-15 16:52:31" itemprop="dateCreated datePublished" datetime="2024-05-15T16:52:31+08:00">2024-05-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-05-13 16:31:06" itemprop="dateModified" datetime="2024-05-13T16:31:06+08:00">2024-05-13</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+        get: key => {
+          const itemStr = localStorage.getItem(key)
       
-          <h1 id="第一章电路模拟和电路定律"><a href="#第一章电路模拟和电路定律" class="headerlink" title="第一章	电路模拟和电路定律"></a>第一章	电路模拟和电路定律</h1><h2 id="1-1电路和电路模拟"><a href="#1-1电路和电路模拟" class="headerlink" title="1.1	电路和电路模拟"></a>1.1	电路和电路模拟</h2><ol>
-<li><p><strong>实际电路：</strong>由电工设备和电气器件按预期目的连接构成的电流的通路</p>
-</li>
-<li><p><strong>实际电路的功能：</strong>能量的传输、分配与转换；信息的传递、控制与处理</p>
-</li>
-<li><p><strong>实际电路的共性：</strong>建立在同一电路理论基础上</p>
-</li>
-<li><p><strong>电源：</strong>电能或电信号的发生器成为电源</p>
-</li>
-<li><p><strong>负载：</strong>用电设备成为负载</p>
-</li>
-<li><p><strong>激励源：</strong>由于电路中的电压、电流是在电源的作用下产生的，因此电源又称为激励源或激励</p>
-</li>
-<li><p><strong>响应：</strong>由激励而在电路中产生的电压、电流称为响应</p>
-</li>
-<li><p><strong>输入和输出：</strong>根据激励与响应之间的因果关系，把激励称为输入，响应称为输出</p>
-</li>
-<li><p><strong>电路模型：</strong>反映实际电路部件的主要电磁性质的理想电路元件及其组合</p>
-</li>
-<li><p><strong>理想电路元件：</strong>有某种确定的电磁性能的理想元件</p>
-</li>
-<li><p>5种基本的理想电路元件：</p>
-<ul>
-<li><p><strong>电阻元件：</strong>表示消耗电能的元件</p>
-</li>
-<li><p><strong>电感元件：</strong>表示产生磁场，储存磁场能量的元件</p>
-</li>
-<li><p><strong>电容元件：</strong>表示产生电场，存储电场能量的元件</p>
-</li>
-<li><p><strong>电压源和电流源：</strong>表示将其它形式的能量转变成电能的元件</p>
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">注意：5种基本理想电路元件有三个特征：</font></p>
-<ul>
-<li><font color="red">只有两个端子</font></li>
-<li><font color="red">可以用电压或电流按数学方式描述</font></li>
-<li><font color="red">不能被分解为其他元件</font></li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>实际电路的两个特征：</p>
-<ul>
-<li>具有相同的主要电磁性能的实际电路部件，在一定条件下可用同一电路模型表示</li>
-<li>同一实际电路部件在不同的应用条件下，其电路模型可以有不同的形式</li>
-</ul>
-</li>
-</ol>
-<h2 id="1-2电流和电压的参考方向"><a href="#1-2电流和电压的参考方向" class="headerlink" title="1.2	电流和电压的参考方向"></a>1.2	电流和电压的参考方向</h2><h3 id="电流的参考方向"><a href="#电流的参考方向" class="headerlink" title="电流的参考方向"></a>电流的参考方向</h3><ol>
-<li><p><strong>电流：</strong>带电粒子有规则的定向运动</p>
-</li>
-<li><p><strong>电流强度：</strong>单位时间内通过导体横截面的电荷量（$\boxed{i(t)\stackrel{\mathrm{def}}{&#x3D;}\lim\limits_{\Delta t\rightarrow 0}\frac{\Delta q}{\Delta t}&#x3D;\frac{dq}{dt}}$）</p>
-</li>
-<li><p><strong>单位：</strong>A(安培)、kA、mA、μA（$1kA&#x3D;10^3A$、$1mA&#x3D;10^{-3}A$、$1\mu A&#x3D;10^{-6}A$）</p>
-</li>
-<li><p><strong>方向：</strong>规定正电荷的运动方向为电流的实际方向</p>
-</li>
-<li><p>元件（导线）中电流流动的实际方向只有两种可能：</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510110857729.png" alt="image-20240510110857729" style="zoom:50%;" />
-</li>
-<li><p><strong>参考方向：</strong>任意假定一个正电荷运动的方向即为电流的参考方向</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510110832536.png" alt="image-20240510110832536" style="zoom:35%;" />
-</li>
-<li><p>电流的参考方向与实际方向的关系：</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510110740577.png" alt="image-20240510110740577" style="zoom:40%;" />
-</li>
-<li><p>电流参考方向的两种表示：</p>
-<ul>
-<li><p>用箭头表示：箭头的指向为电流的参考方向（推荐）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510111101109.png" alt="image-20240510111101109" style="zoom:50%;" />
-</li>
-<li><p>用双下标表示：如$i_{AB}$​，电流的参考方向由A指向B（不推荐）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510111210308.png" alt="image-20240510111210308" style="zoom:50%;" /></li>
-</ul>
-</li>
-</ol>
-<h3 id="电压的参考方向"><a href="#电压的参考方向" class="headerlink" title="电压的参考方向"></a>电压的参考方向</h3><ol>
-<li><p><strong>电位$\varphi$：</strong>单位正电荷$q$从电路中一点移至参考点（$\varphi&#x3D;0$）时电场力做功的大小。</p>
-</li>
-<li><p><strong>电压U：</strong>单位正电荷$q$从电路中一点移至另一点时电场力做功（$W$）的大小（$\boxed{U\stackrel{\mathrm{def}}{&#x3D;}\frac{dW}{dq}}$）</p>
-</li>
-<li><p><strong>实际电压方向：</strong>电位真正降低的方向</p>
-</li>
-<li><p><strong>单位：</strong>V(伏)、kV、mV、μV</p>
-</li>
-<li><p><strong>电压(降)的参考方向：</strong>假设高电位指向低电位的方向</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510112218384.png" alt="image-20240510112218384" style="zoom:40%;" />
-</li>
-<li><p>电压参考方向的三种表示方式：</p>
-<ul>
-<li><p>用箭头表示：（不推荐）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510112401558.png" alt="image-20240510112401558" style="zoom:40%;" />
-</li>
-<li><p>用正负极性表示：（推荐）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510112456492.png" alt="image-20240510112456492" style="zoom:40%;" />
-</li>
-<li><p>用双下标表示：（不推荐）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510112520593.png" alt="image-20240510112520593" style="zoom:40%;" /></li>
-</ul>
-</li>
-</ol>
-<h3 id="关联参考方向"><a href="#关联参考方向" class="headerlink" title="关联参考方向"></a>关联参考方向</h3><ol>
-<li><p><strong>关联参考方向：</strong>元件或支路的$u,i$采用相同的参考方向称之为关联参考方向。反之，称之为非关联参考方向。</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510112754573.png" alt="image-20240510112754573" style="zoom:40%;" />
-</li>
-<li><blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">注意事项：</font></p>
-<ul>
-<li><font color="red">分析电路前必须选定电压和电流的参考方向</font></li>
-<li><font color="red">参考方向一经选定，必须在图中相应位置标注（包括方向和符号），在计算过程中不得任意改变</font></li>
-<li><font color="red">参考方向不同时，其表达式相差一负号，但电压、电流的实际方向不变。</font></li>
-</ul>
-</blockquote>
-</li>
-</ol>
-<h2 id="1-3电功率和能量"><a href="#1-3电功率和能量" class="headerlink" title="1.3	电功率和能量"></a>1.3	电功率和能量</h2><ol>
-<li><p><strong>电功率：</strong>单位时间内电场力所做的功</p>
-<p>$p&#x3D;\frac{dw}{dt}$	$u&#x3D;\frac{dw}{dq}$	$i&#x3D;\frac{dq}{dt}$​<br>$$<br>p&#x3D;\frac{dw}{dt}&#x3D;\frac{dw}{dq}\frac{dq}{dt}&#x3D;ui<br>$$<br><strong>功率的单位：W（瓦）（Watt，瓦特）</strong></p>
-<p><strong>能量的单位：J（焦）（Joule，焦耳）</strong></p>
-</li>
-<li><p>电路吸收或发出功率的判断</p>
-<table>
-    <tr>
-        <td></td>
-        <td>
-            <center>吸收</center>
-        </td>
-        <td>
-            <center>发出</center>
-        </td>
-        <td>
-            <center>关联参考方向</center>
-        </td>
-        <td>
-            <center>非关联参考方向</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>符号</center>
-        </td>
-        <td>
-            <center>+</center>
-        </td>
-        <td>
-            <center>-</center>
-        </td>
-        <td>
-            <center>+</center>
-        </td>
-        <td>
-            <center>-</center>
-        </td>
-    </tr>
-</table>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510145837075.png" alt="image-20240510145837075" style="zoom:40%;" />
-
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510145953366.png" alt="image-20240510145953366" style="zoom:40%;" />
-
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510150042966.png" alt="image-20240510150042966" style="zoom:40%;" />
-
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">注意</font>:</p>
-<p><font color="red">对一完整的电路，满足：发出的功率＝吸收的功率</font></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="1-4电路元件"><a href="#1-4电路元件" class="headerlink" title="1.4	电路元件"></a>1.4	电路元件</h2><ol>
-<li><p><strong>电路元件：</strong>是电路中最基本的组成单元</p>
-</li>
-<li><p>5种基本的理想电路元件：</p>
-<ul>
-<li><p><strong>电阻元件：</strong>表示消耗电能的元件</p>
-</li>
-<li><p><strong>电感元件：</strong>表示产生磁场，储存磁场能量的元件</p>
-</li>
-<li><p><strong>电容元件：</strong>表示产生电场，存储电场能量的元件</p>
-</li>
-<li><p><strong>电压源和电流源：</strong>表示将其它形式的能量转变成电能的元件</p>
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">注意：如果表征元件端子特性的数学关系式是线性关系，该元件称为线性元件，否则称为非线性元件。</font></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>端子特性（元件特性）：</strong>元件的两个端子的电路物理量之间的代数函数关系称为元件的端子特性（亦称元件特性）</p>
-</li>
-<li><p><strong>集总（参数）元件：</strong>假定，在任何时刻，流入二端元件的一个端子的电流等于从另一端子流出的电流，且两个端子之间的电压位单值量。</p>
-</li>
-<li><p><strong>集总电路：</strong>由集总元件构成的电路称为集总电路，或称具有集总参数的电路</p>
-</li>
-</ol>
-<h2 id="1-5电阻元件"><a href="#1-5电阻元件" class="headerlink" title="1.5	电阻元件"></a>1.5	电阻元件</h2><ol>
-<li><p><strong>电阻元件：</strong>对电流呈现阻力的元件。其特性可用$u\thicksim i$平面上的一条曲线来描述：</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510152802903.png" alt="image-20240510152802903" style="zoom:40%;" />
-</li>
-<li><p><strong>线性时不变电阻元件：</strong>任何时刻端电压与电流成正比的电阻元件</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510152915111.png" alt="image-20240510152915111" style="zoom:50%;" />
-</li>
-<li><p>$u\thicksim i$关系：满足欧姆定律</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510153038723.png" alt="image-20240510153038723" style="zoom:40%;" />
-
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510153121371.png" alt="image-20240510153121371" style="zoom:40%;" />
-
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">注意欧姆定律：</font></p>
-<ul>
-<li><font color="red">只适用于线性电阻（R为常数）</font></li>
-<li><font color="red">如电阻上的电压与电流参考方向非关联，公式中应冠以负号</font></li>
-<li><font color="red">说明线性电阻是无记忆、双向性的元件。</font></li>
-</ul>
-</blockquote>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510153450400.png" alt="image-20240510153450400" style="zoom:50%;" />
-</li>
-<li><p><strong>功率</strong></p>
-<p><strong>电阻元件的关联参考方向功率计算</strong></p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510154916073.png" alt="image-20240510154916073" style="zoom:50%;" />
-
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">上述电阻元件的电流、电压为关键参考方向，及$p&#x3D;+ui$，假设该电阻功率为吸收功率，及$p&#x3D;++ui$，因此改电阻元件可以表述为电阻元件吸收$p&#x3D;ui$功率。</font></p>
-</blockquote>
-<p><strong>电阻元件的非关联参考方向功率计算</strong></p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510155016875.png" alt="image-20240510155016875" style="zoom:50%;" />
-
-<hr>
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">上述电阻元件的电流、电压为非关键参考方向，及$p&#x3D;-ui$，假设该电阻功率为发出功率，及$p&#x3D;–ui$，因此该电阻元件可以表述为电阻元件发出$p&#x3D;ui$功率。$u&#x3D;-Ri$是由于$u\sim i$为非关键参考方向，最后取值为负，及表明了电阻元件发出了$p&#x3D;-i^{2}R&#x3D;-\frac{u^2}{R}$功率，等价为改电阻元件吸收了$p&#x3D;i^{2}R&#x3D;\frac{u^2}{R}$功率</font></p>
-</blockquote>
-<blockquote>
-<p>[!IMPORTANT]</p>
-<p><font color="yellowblue">表明：电阻元件在任何时刻总是消耗功率的</font></p>
-</blockquote>
-</li>
-<li><p><strong>能量：</strong></p>
-<p>电阻元件从$t_0$到$t$的时间内吸收的电能为：<br>$$<br>W&#x3D;\int_{t_0}^{t}Ri^2(\xi)d\xi<br>$$</p>
-</li>
-<li><p><strong>开路：</strong>当一个线性电阻元件的端电压不论为何值时，流过它的电流恒为零值，就把它称为开路。</p>
-<p>开路的伏安特性曲线在$u\sim i$平面上与电压轴重合，它相当于$R&#x3D;\infty$或$G&#x3D;0$。</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510161257138.png" alt="image-20240510161257138" style="zoom:50%;" />
-
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">开路电流一定等于0（$i&#x3D;0$），而电压不一定等于零</font></p>
-</blockquote>
-</li>
-<li><p><strong>短路：</strong>当流过一个线性电阻元件的电流不论为何值时，它的端电压恒为零值，就把它称为短路。</p>
-<p>短路的伏安特性曲线在$u\sim i$平面上与电流轴重合，它相当于$R&#x3D;0$或$G&#x3D;\infty$</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240510161749148-1715388155960-12.png" alt="image-20240510161749148" style="zoom:50%;" />
-
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">短路电压一定等于0（$u&#x3D;0$），而电流不一定等于零</font></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="1-6电压源和电流源"><a href="#1-6电压源和电流源" class="headerlink" title="1.6	电压源和电流源"></a>1.6	电压源和电流源</h2><h3 id="理性电压源"><a href="#理性电压源" class="headerlink" title="理性电压源"></a>理性电压源</h3><ol>
-<li><p><strong>理想电压源：</strong>其两端电压总能保持定值或一定的时间函数，其值与流过它的电流$<del>i</del>$​无关的元件叫理想电压源。</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511144336294.png" alt="image-20240511144336294" style="zoom:50%;" />
-</li>
-<li><p><strong>理想电压源的电压、电流关系：</strong></p>
-<ul>
-<li><p>电源两端电压由电源本身决定，与外电路无关；与流经它的电流方向、大小无关。</p>
-</li>
-<li><p>通过电压源的电流由电源及外电路共同决定。</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511144642525.png" alt="image-20240511144642525" style="zoom:50%;" />
-
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">电压源外接电阻，电流$~i&#x3D;\frac{u_s}{R}$​</font></p>
-<p><font color="redblue">电压源开路，$<del>i&#x3D;0</del>(R&#x3D;\infty)$​</font></p>
-<p><font color="redblue">电压源短路，$<del>i&#x3D;\infty</del>(R&#x3D;0)$</font></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>电压源的功率：</strong>$P&#x3D;u_s i$​</p>
-<ul>
-<li><p><strong>电压、电流参考方向非关联：</strong></p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511153004275.png" alt="image-20240511153004275" style="zoom:50%;" />
-
-<p>物理意义：电流(正电荷)由低电位向高电位移动，外力克服电场力做功，电源发出功率。</p>
-<p>$P&#x3D;u_si\Longrightarrow发出功率，起电源作用$​</p>
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">电压源的电压、电流为非关联参考方向，因此$P&#x3D;-u_si$，为了公式好看假设电压源为发出功率，即$P&#x3D;–u_si$，最终有$P&#x3D;u_si&gt;0$，因此电压源为发出功率，起电源作用。</font></p>
-</blockquote>
-</li>
-<li><p><strong>电压、电流参考方向关联：</strong></p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511153633040.png" alt="image-20240511153633040" style="zoom:50%;" />
-
-<p>物理意义：电场力做功，电源吸收功率</p>
-<p>$P&#x3D;u_si\Longrightarrow吸收功率，充当负载$</p>
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">电压源的电压、电流为关联参考方向，因此$P&#x3D;+u_si$，为了公式好看假设电压源为吸收功率，即$P&#x3D;++u_si$，最终有$P&#x3D;u_si&gt;0$，因此电压源为吸收功率，起负载作用。</font></p>
-</blockquote>
-</li>
-<li><p>例子：计算图示电路各元件的功率：</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511155243922.png" alt="image-20240511155243922" style="zoom:50%;" />
-$$
-解:	u_R=(10-5)=5V~~~~~~~~~~~~~~~~~\\
-i=\frac{u_R}{R}=\frac{5}{5}=1A~~~~~~~~~~~~\\~~~~~~~~~~~~~~
-P_{10V}=u_si=10\times 1=10W~~~~发出\\
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P_&#123;5V&#125;=u_si=5\times 1=5W~~~~吸收\\</span><br></pre></td></tr></table></figure>
-P_{R}=Ri^2=10\times 1=5W~~~~吸收\\
-满足:P(发)=P(吸)\\
-or~\sum P(发)=0~~\\
-or~\sum P(吸)=0~~
-$$
-
-<blockquote>
-<p>[!TIP]</p>
-<p><font color="lightgreen">电阻元件为关联参考方向</font></p>
-<p><font color="lightgreen">5V电压源为关联参考方向</font></p>
-<p><font color="lightgreen">10V电压源为非关联参考方向</font></p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="理想电流源"><a href="#理想电流源" class="headerlink" title="理想电流源"></a>理想电流源</h3><ol>
-<li><p><strong>理想电流源：</strong>其输出电流总能保持定值或一定的时间函数，其值与它的两端电压$<del>u</del>$无关的元件叫理想电流源。</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511161745705.png" alt="image-20240511161745705" style="zoom:50%;" />
-</li>
-<li><p><strong>理想电流源的电压、电流关系</strong></p>
-<ul>
-<li><p>电流源的输出电流由电流本身决定，与外电路无关；与它的两端电压方向、大小无关</p>
-</li>
-<li><p>电流源两端的电压由电源及外电路共同决定。</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511162143599.png" alt="image-20240511162143599" style="zoom:35%;" />
-
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">电流源外接电阻，电流$~u&#x3D;Ri_s$​</font></p>
-<p><font color="redblue">电流源开路，$<del>u&#x3D;0</del>(R&#x3D;0)$​</font></p>
-<p><font color="redblue">电流源短路，$<del>u&#x3D;\infty</del>(R&#x3D;\infty)$</font></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>实际电流源的产生：可由稳流电子设备产生，如晶体管的集电极电流与负载无关；光电池在一定光线照射下光电子被激发产生一定值的电流等。</p>
-</li>
-<li><p><strong>电流源的功率：</strong>$P&#x3D;ui_s$​​*</p>
-<ol>
-<li><ul>
-<li><p>电压、电流的参考方向非关联</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511164845903.png" alt="image-20240511164845903" style="zoom:50%;" />
-
-<p>$P&#x3D;ui_s\Longrightarrow 发出功率，起电源作用$​</p>
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">电流源的电压、电流为非关联参考方向，因此$P&#x3D;-u_si$，为了公式好看假设电流源为发出功率，即$P&#x3D;–u_si$，最终有$P&#x3D;u_si&gt;0$，因此电流源为发出功率，起电源作用。</font></p>
-</blockquote>
-</li>
-<li><p>电压、电流的参考方向关联</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511165233222.png" alt="image-20240511165233222" style="zoom:50%;" />
-
-<p>$P&#x3D;ui_s\Longrightarrow 吸收功率，充当负载$​</p>
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">电流源的电压、电流为关联参考方向，因此$P&#x3D;+u_si$，为了公式好看假设电压源为吸收功率，即$P&#x3D;++u_si$，最终有$P&#x3D;u_si&gt;0$，因此电流源为吸收功率，起负载作用。</font></p>
-</blockquote>
-</li>
-<li><p>例：计算图示电路各元件的功率</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511170007293.png" alt="image-20240511170007293" style="zoom:50%;" />
-$$
-解:i=-i_s=-2A~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
-u=5V~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
-P_{2A}=i_su=2\times5=10W~~~~~~~~~~~~~~~~~发出\\
-P_{5V}=u_si=5\times(-2)=-10W~~~~~~~~发出\\
-满足:P(发)=P(吸)~~~~~~~~~~~~~~~~~~~~~~~\\
-or~\sum P(发)=0~~~~~~~~~~~~~~~~~~~~~~~~~\\
-or~\sum P(吸)=0~~~~~~~~~~~~~~~~~~~~~~~~~
-$$
-
-<blockquote>
-<blockquote>
-<p>[!TIP]</p>
-<p><font color="lightgreen">假定电路中的电流方向为顺时间，电流源的方向为逆时针。因此求得电路中的电流为$i&#x3D;-i_s$​，电路中的电压为5V</font></p>
-<p><font color="lightgreen">2A电流源为非关联参考方向</font></p>
-<p><font color="lightgreen">5V电压源为非关联参考方向</font></p>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="电流源和电压源的比较"><a href="#电流源和电压源的比较" class="headerlink" title="电流源和电压源的比较"></a>电流源和电压源的比较</h3></li>
-</ol>
-<h2 id="1-7受控电源（非独立源）"><a href="#1-7受控电源（非独立源）" class="headerlink" title="1.7	受控电源（非独立源）"></a>1.7	受控电源（非独立源）</h2><ol>
-<li><p><strong>独立电源：</strong>独立电源是电路中的“输入”，它表示外界对电路的作用，电路中电压或电流是由于独立电源起的“激励”作用产生的。</p>
-</li>
-<li><p><strong>受控电源：</strong>电压或电流的大小和方向不是给定的时间函数，而是受电路中某个地方的电压（或电流）控制的电源，称受控源。</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511232836071.png" alt="image-20240511232836071" style="zoom:50%;" />
-</li>
-<li><p><strong>受控电压源的分类：</strong>根据控制量和被控制量是电压$<del>u</del>$或电流$<del>i</del>$，受控源可分四种类型：当被控制量是电压时，用受控电压源表示；当被控制量是电流时，用受控电流源表示。即有电流控制的电流源（CCCS）、电压控制的电流源（VCCS）、电压控制的电压源（VCVS）和电流控制的电压源（CCVS）。</p>
-<blockquote>
-<p>[!TIP]</p>
-<p><font color="lightgreen">电压控制的电压源(VCVS)：Voltage Controlled Voltage Source</font></p>
-<p><font color="lightgreen">电压控制的电流源(VCCS)：Voltage Controlled Current Source</font></p>
-<p><font color="lightgreen">电流控制的电压源(CCVS)：Current Controlled Voltage Source</font></p>
-<p><font color="lightgreen">电流控制的电流源(CCCS)：Current Controlled Current  Source</font></p>
-</blockquote>
-<ul>
-<li><p>电流控制的电流源（CCCS）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511233827001.png" alt="image-20240511233827001" style="zoom:50%;" />
-
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">上图把受控源表示为具有4个端子的电路模型，其中受控电压源或受控电流源具有一对端子，另一对控制端子则或为开路，或为短路（电阻部分），分别对应于控制量是开路电压或短路电流</font></p>
-</blockquote>
-</li>
-<li><p>电压控制的电流（VCCS）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511234441730.png" alt="image-20240511234441730" style="zoom:50%;" />
-</li>
-<li><p>电压控制的电压源（VCVS）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511234517470.png" alt="image-20240511234517470" style="zoom:50%;" />
-</li>
-<li><p>电流控制的电压源（CCVS）</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240511234552451.png" alt="image-20240511234552451" style="zoom:50%;" /></li>
-</ul>
-</li>
-<li><p><strong>受控源与独立源的比较</strong></p>
-<ul>
-<li><p>独立源电压（或电流）由电源本身决定，与电路中其它电压、电流无关，而受控源电压（或电流）由控制量决定</p>
-</li>
-<li><p>独立源在电路中起“激励”作用，在电路中产生电压、电流，而受控源时反映电路中某处的电压或电流对另一处的电压或电流的控制关系，在电路中不能作为“激励”</p>
-</li>
-<li><p>例：求电压$u_2$</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513114506761.png" alt="image-20240513114506761" style="zoom:50%;" />
-
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513114520768.png" alt="image-20240513114520768" style="zoom:50%;" /></li>
-</ul>
-</li>
-<li></li>
-</ol>
-<h2 id="1-8基尔霍夫定律"><a href="#1-8基尔霍夫定律" class="headerlink" title="1.8	基尔霍夫定律"></a>1.8	基尔霍夫定律</h2><ol>
-<li><p><strong>基尔霍夫定律：</strong>基尔霍夫定律包括基尔霍夫电流定律（KCL）和基尔霍夫电压定律（KVL）。它反映了电路中所有支路电压和电流所遵循的基本规律，是分析集总参数电路的基本定律。基尔霍夫定律与元件特性构成了电路分析的基础。</p>
-</li>
-<li><p><strong>支路</strong></p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513133648719.png" alt="image-20240513133648719" style="zoom:50%;" />
-
-<ul>
-<li><p>电路中每一个两端元件就叫一条支路</p>
-</li>
-<li><p>电路中通过同一电流的分支</p>
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">支路的定义方式有两种，如上所述。</font></p>
-<p><font color="redblue">对于第一种定义：电路中每一个两端元件就叫一条支路。上图由5个两端元件，因此对于第一种第一支路一共有5个</font></p>
-<p><font color="redblue">对于第二种定义：电路中通过同一电流的分支。上图$<del>u_{S1}</del>R_1<del>$为一条支路，$u_{S2}</del>R_2<del>$为一条支路，$R_3</del>$​为一条支路，因此第二种定义支路一共有3个</font></p>
-<p><font color="redblue">推荐掌握第二种支路的定义方法，即电路中通过同一电流的分支。</font></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>结点：</strong></p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513133658939.png" alt="image-20240513133658939" style="zoom:50%;" />
-
-<ul>
-<li><p>元件的连接点称为结点</p>
-</li>
-<li><p>三条以上的支路的连接点称为结点</p>
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">结点的定义方式有两种，如上所述。</font></p>
-<p><font color="redblue">对于第一种定义：元件的连接点称为结点。上图$u_{S1}<del>R_1</del>$之间有一个连接点，$u_{S1}<del>u_{S2}</del>R_3<del>$之间有一个连接点，$u_{S2}</del>R_2<del>$之间有一个连接点，$R_1</del>R_2<del>R_3</del>$之间有一个连接点，因此总共有4个结点</font></p>
-<p><font color="redblue">对于第二种定义：三条以上的支路的连接点称为结点。上图$<del>u_{S1}</del>u_{S2}<del>R_3</del>$为一个连接点，$<del>R_1</del>R_2<del>R_3</del>$为一个连接点，因此总共有2个结点。</font></p>
-<p><font color="redblue">推荐掌握第二种结点的定义，即三条以上的支路的连接点称为结点</font></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>路径：</strong>两结点间的一条通路。由支路构成</p>
-</li>
-<li><p><strong>回路：</strong>由支路组成的闭合路径</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513135617109.png" alt="image-20240513135617109" style="zoom:50%;" />
-
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">上图$u_{S1}<del>R_1</del>R_2<del>u_{S2}</del>$为一个闭合路径，$u_{S2}<del>R_2</del>R_3<del>$为一个闭合路径，$u_{S1}</del>R_1<del>R_3</del>$为一个闭合路径，因此总共有3个回路</font></p>
-</blockquote>
-</li>
-<li><p><strong>网孔：</strong>对平面电路，其内部不含任何支路的回路称网孔</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513135617109.png" alt="image-20240513135617109" style="zoom:50%;" />
-
-<blockquote>
-<p>[!NOTE]</p>
-<p><font color="redblue">上图$u_{S1}<del>R_1</del>R_2<del>u_{S2}</del>$为一个回路内部不含任何回路，因此为一个网孔，$u_{S2}<del>R_2</del>R_3<del>$为一个回路内部不含任何回路，因此为一个网孔，而$</del>u_{S1}<del>R_1</del>R_3<del>$为一个回路，但因其内部含有$u_{S1}</del>R_1<del>R_2</del>u_{S2}<del>$和$u_{S2}</del>R_2<del>R_3</del>$，因此不为网孔，因此总共有2个网孔</font></p>
-</blockquote>
-<blockquote>
-<p>[!IMPORTANT]</p>
-<p><font color="yellowblue">网孔是回路，但回路不一定是网孔</font></p>
-</blockquote>
-</li>
-<li><p><strong>基尔霍夫电流定律（KCL：Kirchhoff’s Current Law）：</strong>在集总参数电路中，任意时刻，对任意结点流出（或流入）该结点电流的代数和等于零（流出结点的电流前面取“+”号，则流入结点的电流前面取“-”号）<br>$$<br>\sum_{b&#x3D;1}^m i(t)&#x3D;0<del>or</del>\sum i_入&#x3D;\sum i_出\Longrightarrow 流进的电流等于流出的电流<br>$$<br>例：</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513142326382.png" alt="image-20240513142326382" style="zoom:50%;" />
-$$
-令流出电流为'+',有:\\
--i_1-i_2+i_3+i_4+i_5=0\\
-or~~~~~~~i_1+i_2=i_3+i_4+i_5
-$$
-例：
-
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513144126166.png" alt="image-20240513144126166" style="zoom:50%;" />
-$$
-i_1+i_4+i_6=0\\
--i_2-i_4+i_5=0~~\\
-~i_3-i_5-i_6=0\\
-三式相加得:~~~~~~~~~~~\\
-~i_1-i_2+i_3=0
-$$
-
-<blockquote>
-<p>[!IMPORTANT]</p>
-<p><font color="yellowred">KCL可推广应用于电路中包围多个结点得任意闭合面</font></p>
-</blockquote>
-<blockquote>
-<p>[!CAUTION]</p>
-<ol>
-<li><font color="red">KCL是电荷守恒和电流连续性原理在电路中任意结点处的反映</font></li>
-<li><font color="red">KCL是对结点处支路电流加的约束，与支路上接的是什么元件无关，与电路时线性还是非线性无关</font></li>
-<li><font color="red">KCL方程是按电流参考方向列写的，与电流实际方向无关</font></li>
-</ol>
-</blockquote>
-</li>
-<li><p><strong>基尔霍夫电压定律（KVL：Kirchhoff’s Voltage Law）：</strong>在集总参数电路中，任一时刻，沿任一回路，所有支路电压的代数和恒等于零。<br>$$<br>\sum_{b&#x3D;1}^m u(t)&#x3D;0<del>or</del>\sum u_降 &#x3D; \sum u_升<br>$$</p>
-<blockquote>
-<p>[!NOTE]</p>
-<ol>
-<li><font color="redblue">标定各元件电压参考方向</font></li>
-<li><font color="redblue">选定回路绕行方向，顺时针或逆时针</font></li>
-</ol>
-</blockquote>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513151147980.png" alt="image-20240513151147980" style="zoom:60%;" />
-$$
-选取顺时针为回路的绕行方向\\
--U_1-U_{S1}+U_2+U_3+U_4+U_{S4}=0\\
-Or~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
-U_2+U_3+U_4+U_{S4}=U_1+U_{S1}~~~\\
--R_1I_1+R_2I_2-R_3I_3+R_4I_4=U_{S1}-U_{S4}~~~~~~~~~~~~~~~~~
-$$
-
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">KVL也适用于电路中任一假想的回路</font></p>
-</blockquote>
-<p>例：</p>
-<img src="./第一章 电路模拟和电路定律.assets/image-20240513153007418.png" alt="image-20240513153007418" style="zoom:50%;" />
-$$
-U_{ba}=U_1+U_2+U_S
-$$
-
-<blockquote>
-<p>[!TIP]</p>
-<p><font color="lightgreen">上图虚线部分为假想回路，假设假想部分的电阻左“+”右“-”，由于$<del>U_s</del>$为电压源，若假想部分的电阻左“+”，则假想部分的电阻为高电位，是不存在的，因此该假设不正确。即假想部分的电阻左“-”右“+”，此时假想部分电阻左边“-”与$<del>U_s</del>$​为电压源左边“-”为等电势</font></p>
-<p><font color="lightgreen">回路的绕行方向设为顺时针，则有：$U_{ba}-U_s-U_1-U_2&#x3D;0\Longrightarrow U_{ba}&#x3D;U_S+U_1+U_2$</font></p>
-</blockquote>
-<blockquote>
-<p>[!CAUTION]</p>
-<p><font color="red">KVL的实质反映了电路遵从能量守恒定律</font></p>
-<p><font color="red">KVL是对回路中的支路电压加的约束，与回路各支路上接的是什么元件无关，与电路时线性还时非线性无关</font></p>
-<p><font color="red">KVL方程时按电压参考方向列写，与电压实际方向无关</font></p>
-</blockquote>
-</li>
-<li></li>
-</ol>
-
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/15/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/15/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2024-05-15 16:22:29" itemprop="dateCreated datePublished" datetime="2024-05-15T16:22:29+08:00">2024-05-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
       }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/05/15/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E7%94%B5%E8%B7%AF%E6%A8%A1%E6%8B%9F%E5%92%8C%E7%94%B5%E8%B7%AF%E5%AE%9A%E5%BE%8B/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-05-15T08:52:31.969Z" title="Created 2024-05-15 16:52:31">2024-05-15</time></span></div><div class="content">第一章	电路模拟和电路定律1.1	电路和电路模拟
+实际电路：由电工设备和电气器件按预期目的连接构成的电流的通路
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
+实际电路的功能：能量的传输、分配与转换；信息的传递、控制与处理
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+实际电路的共性：建立在同一电路理论基础上
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://plus.google.com/yourname" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i>Google</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/yourname" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://www.facebook.com/yourname" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://stackoverflow.com/yourname" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://youtube.com/yourname" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://instagram.com/yourname" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="skype:yourname?call|chat" title="Skype → skype:yourname?call|chat" rel="noopener" target="_blank"><i class="fab fa-skype fa-fw"></i>Skype</a>
-      </span>
-  </div>
+电源：电能或电信号的发生器成为电源
 
+负载：用电设备成为负载
 
+激励源：由于电路中的电压、电流是在电源的作用下产生的，因此电源又称为激励源或激励
 
-      </div>
+响应：由激励而在电路中产生的电压、电流称为响应
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+输入和输出：根据激励与响应之间的因果关系，把激励称为输入，响应称为输出
 
+电路模型：反映实际电路部件的主要电磁性质的理想电路元件及其组合
 
-      </div>
-    </main>
+理想电路元件：有某种确定的电磁性能的理想元件
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
+5种基本的理想电路元件：
 
-        
+电阻元件：表示消耗电能的元件
 
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
+电感元件：表示产生磁场，储存磁场能量的元件
 
-        
+电容元件：表示产生电场，存储电场能量的元件
+
+电压源和电流源：表示将其它形式的能量转变成电能的元件
+
+[!CAUTION]
+注意：5种基本理想电路元件有三个特征：
+
+只有两个端子
+可以用电压或电流按数学方式描述
+不能被分解为其他元件
 
 
 
 
 
+实际电路的两个特征：
 
+具有相同的主要电 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/05/15/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-05-15T08:22:29.708Z" title="Created 2024-05-15 16:22:29">2024-05-15</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
+More info: Writing
+Run server1$ hexo server
 
-      </div>
-    </footer>
-  </div>
+More info: Server
+Generate static files1$ hexo generate
 
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/15/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E7%94%B5%E8%B7%AF%E6%A8%A1%E6%8B%9F%E5%92%8C%E7%94%B5%E8%B7%AF%E5%AE%9A%E5%BE%8B/" title="Untitled">Untitled</a><time datetime="2024-05-15T08:52:31.969Z" title="Created 2024-05-15 16:52:31">2024-05-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/15/hello-world/" title="Hello World">Hello World</a><time datetime="2024-05-15T08:22:29.708Z" title="Created 2024-05-15 16:22:29">2024-05-15</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">May 2024</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-05-16T01:25:02.877Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
